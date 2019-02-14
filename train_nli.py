@@ -296,3 +296,6 @@ evaluate(0, 'test', True)
 
 # Save encoder instead of full model
 torch.save(nli_net.encoder.state_dict(), os.path.join(params.outputdir, params.outputmodelname + '.encoder.pkl'))
+
+# Save classifier of the model
+torch.save(nli_net.classifier.state_dict(), os.path.join(params.outputdir, params.outputmodelname + '.classifier.pkl'))
